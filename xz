@@ -1,0 +1,154 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+
+/*Person tom = new Person(); // создание объекта класса Person
+
+// Получаем значение полей в переменные
+string personName = tom.name;
+int personAge = tom.age;
+Console.WriteLine($"Имя: {personName}  Возраст {personAge}"); //Имя: Undefined  Возраст: 0
+
+// устанавливаем новые значения полей
+tom.name = "Tom";
+tom.age = 37;
+
+// обращаемся к методу Print
+tom.Print(); // Имя: Tom Возраст: 37*/
+
+// создаем класс "Двигатель" с полями - мощность, объем, тип, серийный номер.
+class Engine
+{
+    public int Power { get; set; }
+    public double Volume { get; set; }
+    public string Type { get; set; }
+    public string SerialNumber { get; set; }
+}
+
+// создаем класс "Шасси" с полями - количество колес, номер, допустимая нагрузка.
+class Chassis
+
+{
+    public int NumberOfWheels {get; set; }
+    public string Number { get; set; }
+    public double MaxLoad { get; set; }
+}
+
+// создаем класс "Трансмиссия" с полями - тип, количесвто передач, производитель
+class Transmission
+{
+    public string Type {get; set; }
+    public int NumberOfGears { get; set; }
+    public string Manufacturer { get; set; }
+}
+
+// реализация класса "Легковой автомобиль"
+class Car 
+{
+    public Engine Engine {get; set; }
+    public Chassis Chassis {get; set; }
+    public Transmission Transmission {get; set; }
+    public string Model { get; set; }
+    
+    public void PrintInfo()
+    {
+        Console.WriteLine("Легковой автомобиль:");
+        Console.WriteLine("Модель" + Model);
+        Console.WriteLine("Мощность двигателя" + Engine.Power);
+        Console.WriteLine("Объем двигателя" + Engine.Volume);
+        Console.WriteLine("Тип двигателя" + Engine.Type);
+        Console.WriteLine("Серийный номер" + Engine.SerialNumber);
+        
+        Console.WriteLine("Количество колес" + Chassis.NumberOfWheels);
+        Console.WriteLine("Номер шасси" + Chassis.Number);
+        Console.WriteLine("Допустимая нагрузка" + Chassis.MaxLoad);
+        
+        Console.WriteLine("Тип трансмиссии" + Transmission.Type);
+        Console.WriteLine("Количество передач" + Transmission.NumberOfGears);
+        Console.WriteLine("Производитель трансмиссии" + Transmission.Manufacturer);
+    }
+}
+
+// реализация класса "Грузовик"
+class Truck
+{
+    public Engine Engine {get; set; }
+    public Chassis Chassis {get; set; }
+    public Transmission Transmission {get; set; }
+    public string Model { get; set; }
+    
+    public void PrintInfo()
+    {
+        Console.WriteLine("Грузовик:");
+        Console.WriteLine("Модель" + Model);
+        Console.WriteLine("Мощность двигателя" + Engine.Power);
+        Console.WriteLine("Объем двигателя" + Engine.Volume);
+        Console.WriteLine("Тип двигателя" + Engine.Type);
+        Console.WriteLine("Серийный номер" + Engine.SerialNumber);
+        
+        Console.WriteLine("Количество колес" + Chassis.NumberOfWheels);
+        Console.WriteLine("Номер шасси" + Chassis.Number);
+        Console.WriteLine("Допустимая нагрузка" + Chassis.MaxLoad);
+        
+        Console.WriteLine("Тип трансмиссии" + Transmission.Type);
+        Console.WriteLine("Количество передач" + Transmission.NumberOfGears);
+        Console.WriteLine("Производитель трансмиссии" + Transmission.Manufacturer);
+    }
+}
+
+// реализация класса "Автобус"
+class Bus
+{
+    public Engine Engine {get; set; }
+    public Chassis Chassis {get; set; }
+    public Transmission Transmission {get; set; }
+    public string Model { get; set; }
+    
+    public void PrintInfo()
+    {
+        Console.WriteLine("Автобус:");
+        Console.WriteLine("Модель" + Model);
+        Console.WriteLine("Мощность двигателя" + Engine.Power);
+        Console.WriteLine("Объем двигателя" + Engine.Volume);
+        Console.WriteLine("Тип двигателя" + Engine.Type);
+        Console.WriteLine("Серийный номер" + Engine.SerialNumber);
+        
+        Console.WriteLine("Количество колес" + Chassis.NumberOfWheels);
+        Console.WriteLine("Номер шасси" + Chassis.Number);
+        Console.WriteLine("Допустимая нагрузка" + Chassis.MaxLoad);
+        
+        Console.WriteLine("Тип трансмиссии" + Transmission.Type);
+        Console.WriteLine("Количество передач" + Transmission.NumberOfGears);
+        Console.WriteLine("Производитель трансмиссии" + Transmission.Manufacturer);
+    }
+}
+
+// реализация класса "Скутер"
+class Scooter
+{
+    public Engine Engine {get; set; }
+    public Chassis Chassis {get; set; }
+    public Transmission Transmission {get; set; }
+    public string Model { get; set; }
+    
+    public void PrintInfo()
+    {
+        Console.WriteLine("Скутер:");
+        Console.WriteLine("Модель" + Model);
+        Console.WriteLine("Мощность двигателя" + Engine.Power);
+        Console.WriteLine("Объем двигателя" + Engine.Volume);
+        Console.WriteLine("Тип двигателя" + Engine.Type);
+        Console.WriteLine("Серийный номер" + Engine.SerialNumber);
+        
+        Console.WriteLine("Количество колес" + Chassis.NumberOfWheels);
+        Console.WriteLine("Номер шасси" + Chassis.Number);
+        Console.WriteLine("Допустимая нагрузка" + Chassis.MaxLoad);
+        
+        Console.WriteLine("Тип трансмиссии" + Transmission.Type);
+        Console.WriteLine("Количество передач" + Transmission.NumberOfGears);
+        Console.WriteLine("Производитель трансмиссии" + Transmission.Manufacturer);
+    }
+}
