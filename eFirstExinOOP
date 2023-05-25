@@ -5,20 +5,6 @@ using System.Text;
 using System.Threading.Tasks;
 
 
-/*Person tom = new Person(); // создание объекта класса Person
-
-// Получаем значение полей в переменные
-string personName = tom.name;
-int personAge = tom.age;
-Console.WriteLine($"Имя: {personName}  Возраст {personAge}"); //Имя: Undefined  Возраст: 0
-
-// устанавливаем новые значения полей
-tom.name = "Tom";
-tom.age = 37;
-
-// обращаемся к методу Print
-tom.Print(); // Имя: Tom Возраст: 37*/
-
 // создаем класс "Двигатель" с полями - мощность, объем, тип, серийный номер.
 class Engine
 {
@@ -32,7 +18,7 @@ class Engine
 class Chassis
 
 {
-    public int NumberOfWheels {get; set; }
+    public int NumberOfWheels { get; set; }
     public string Number { get; set; }
     public double MaxLoad { get; set; }
 }
@@ -40,7 +26,7 @@ class Chassis
 // создаем класс "Трансмиссия" с полями - тип, количесвто передач, производитель
 class Transmission
 {
-    public string Type {get; set; }
+    public string Type { get; set; }
     public int NumberOfGears { get; set; }
     public string Manufacturer { get; set; }
 }
@@ -48,9 +34,9 @@ class Transmission
 // реализация класса "Легковой автомобиль"
 class Car 
 {
-    public Engine Engine {get; set; }
-    public Chassis Chassis {get; set; }
-    public Transmission Transmission {get; set; }
+    public Engine Engine { get; set; }
+    public Chassis Chassis { get; set; }
+    public Transmission Transmission { get; set; }
     public string Model { get; set; }
     
     public void PrintInfo()
