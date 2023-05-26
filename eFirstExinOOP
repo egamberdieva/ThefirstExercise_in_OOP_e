@@ -138,3 +138,13 @@ class Scooter
         Console.WriteLine("Производитель трансмиссии" + Transmission.Manufacturer);
     }
 }
+
+
+public class MainClass
+{
+    public static void Main()
+    {
+        Console.WriteLine("");
+        Console.WriteLine("wtf");
+    }
+}
