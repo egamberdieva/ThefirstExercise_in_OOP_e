@@ -1,0 +1,183 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Xml;
+using System.Xml.Serialization;
+
+
+
+// создаем класс "Двигатель" с полями - мощность, объем, тип, серийный номер.
+public class Engine
+{
+    public int Power { get; set; }
+    public double Volume { get; set; }
+    public string Type { get; set; }
+    public string SerialNumber { get; set; }
+}
+
+// создаем класс "Шасси" с полями - количество колес, номер, допустимая нагрузка.
+public class Chassis
+
+{
+    public int NumberOfWheels { get; set; }
+    public string Number { get; set; }
+    public double MaxLoad { get; set; }
+}
+
+// создаем класс "Трансмиссия" с полями - тип, количесвто передач, производитель
+public class Transmission
+{
+    public string Type { get; set; }
+    public int NumberOfGears { get; set; }
+    public string Manufacturer { get; set; }
+}
+
+// реализация класса "Легковой автомобиль"
+public class Car 
+{
+    public Engine Engine { get; set; }
+    public Chassis Chassis { get; set; }
+    public Transmission Transmission { get; set; }
+    public string Model { get; set; }
+    
+    public void PrintInfo()
+    {
+        Console.WriteLine("Легковой автомобиль:");
+        Console.WriteLine("Модель" + Model);
+        Console.WriteLine("Мощность двигателя" + Engine.Power);
+        Console.WriteLine("Объем двигателя" + Engine.Volume);
+        Console.WriteLine("Тип двигателя" + Engine.Type);
+        Console.WriteLine("Серийный номер" + Engine.SerialNumber);
+        
+        Console.WriteLine("Количество колес" + Chassis.NumberOfWheels);
+        Console.WriteLine("Номер шасси" + Chassis.Number);
+        Console.WriteLine("Допустимая нагрузка" + Chassis.MaxLoad);
+        
+        Console.WriteLine("Тип трансмиссии" + Transmission.Type);
+        Console.WriteLine("Количество передач" + Transmission.NumberOfGears);
+        Console.WriteLine("Производитель трансмиссии" + Transmission.Manufacturer);
+    }
+}
+
+// реализация класса "Грузовик"
+public class Truck
+{
+    public Engine Engine {get; set; }
+    public Chassis Chassis {get; set; }
+    public Transmission Transmission {get; set; }
+    public string Model { get; set; }
+    
+    public void PrintInfo()
+    {
+        Console.WriteLine("Грузовик:");
+        Console.WriteLine("Модель" + Model);
+        Console.WriteLine("Мощность двигателя" + Engine.Power);
+        Console.WriteLine("Объем двигателя" + Engine.Volume);
+        Console.WriteLine("Тип двигателя" + Engine.Type);
+        Console.WriteLine("Серийный номер" + Engine.SerialNumber);
+        
+        Console.WriteLine("Количество колес" + Chassis.NumberOfWheels);
+        Console.WriteLine("Номер шасси" + Chassis.Number);
+        Console.WriteLine("Допустимая нагрузка" + Chassis.MaxLoad);
+        
+        Console.WriteLine("Тип трансмиссии" + Transmission.Type);
+        Console.WriteLine("Количество передач" + Transmission.NumberOfGears);
+        Console.WriteLine("Производитель трансмиссии" + Transmission.Manufacturer);
+    }
+}
+
+// реализация класса "Автобус"
+public class Bus
+{
+    public Engine Engine {get; set; }
+    public Chassis Chassis {get; set; }
+    public Transmission Transmission {get; set; }
+    public string Model { get; set; }
+    
+    public void PrintInfo()
+    {
+        Console.WriteLine("Автобус:");
+        Console.WriteLine("Модель" + Model);
+        Console.WriteLine("Мощность двигателя" + Engine.Power);
+        Console.WriteLine("Объем двигателя" + Engine.Volume);
+        Console.WriteLine("Тип двигателя" + Engine.Type);
+        Console.WriteLine("Серийный номер" + Engine.SerialNumber);
+        
+        Console.WriteLine("Количество колес" + Chassis.NumberOfWheels);
+        Console.WriteLine("Номер шасси" + Chassis.Number);
+        Console.WriteLine("Допустимая нагрузка" + Chassis.MaxLoad);
+        
+        Console.WriteLine("Тип трансмиссии" + Transmission.Type);
+        Console.WriteLine("Количество передач" + Transmission.NumberOfGears);
+        Console.WriteLine("Производитель трансмиссии" + Transmission.Manufacturer);
+    }
+}
+
+// реализация класса "Скутер"
+public class Scooter
+{
+    public Engine Engine {get; set; }
+    public Chassis Chassis {get; set; }
+    public Transmission Transmission {get; set; }
+    public string Model { get; set; }
+    
+    public void PrintInfo()
+    {
+        Console.WriteLine("Скутер:");
+        Console.WriteLine("Модель" + Model);
+        Console.WriteLine("Мощность двигателя" + Engine.Power);
+        Console.WriteLine("Объем двигателя" + Engine.Volume);
+        Console.WriteLine("Тип двигателя" + Engine.Type);
+        Console.WriteLine("Серийный номер" + Engine.SerialNumber);
+        
+        Console.WriteLine("Количество колес" + Chassis.NumberOfWheels);
+        Console.WriteLine("Номер шасси" + Chassis.Number);
+        Console.WriteLine("Допустимая нагрузка" + Chassis.MaxLoad);
+        
+        Console.WriteLine("Тип трансмиссии" + Transmission.Type);
+        Console.WriteLine("Количество передач" + Transmission.NumberOfGears);
+        Console.WriteLine("Производитель трансмиссии" + Transmission.Manufacturer);
+    }
+}
+
+
+public class MainClass
+{
+    public static void Main()
+    {
+        List<object> Car = new List<object>
+        {
+            new Engine { Power = 450, Volume = 4.0, Type = "Petrol", SerialNumber = "163101BF" }, 
+            new Chassis { NumberOfWheels = 4, Number = "1011", MaxLoad = 700}, 
+            new Transmission { Type = "SUV", NumberOfGears = 5, Manufacturer = "Lamborghini" },
+            "Lamborghini Urus",
+        };
+        
+        List<object> Truck = new List<object>
+        {
+            new Engine { Power = 400, Volume = 3.0, Type = "Petrol", SerialNumber = "013116BF" }, 
+            new Chassis { NumberOfWheels = 6, Number = "1110", MaxLoad = 13000}, 
+            new Transmission { Type = "Урал", NumberOfGears = 5, Manufacturer = "Урал NEXT" },
+            "Урал-4320",
+        };
+        
+        List<object> Bus = new List<object>
+        {
+            new Engine { Power = 350, Volume = 2.0, Type = "Battery", SerialNumber = "BF013116" }, 
+            new Chassis { NumberOfWheels = 4, Number = "1101", MaxLoad = 13750}, 
+            new Transmission { Type = "E12", NumberOfGears = 6, Manufacturer = "Yutong ZK6126BEVG" },
+            "Yutong E12M",
+        };
+        
+        List<object> Scooter = new List<object>
+        {
+            new Engine { Power = 150, Volume = 2.0, Type = "Petrol", SerialNumber = "BF163101" }, 
+            new Chassis { NumberOfWheels = 2, Number = "1011", MaxLoad = 150}, 
+            new Transmission { Type = "CVT", NumberOfGears = 3, Manufacturer = "Yamaha Aerox" },
+            "Yamaha Aerox 155",
+        };
+    }
+}
+
